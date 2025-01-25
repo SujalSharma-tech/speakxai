@@ -37,7 +37,7 @@ cd speakxai
 
 ### 2. Make a .env file by executing following command
 ```
-echo "REACT_APP_ENVOY_URL=http://localhost:8000" > client/.env
+echo REACT_APP_ENVOY_URL=http://localhost:8000 > client/.env
 ```
 
 ### 3. Build and run Docker container
