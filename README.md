@@ -55,6 +55,6 @@ Open your browser and navigate to http://localhost:8081
 docker-compose down
 ```
 
-
+### **NOTE** : MongoDB Connection String is exposed for development environment
 Thank you for using this project.
 
