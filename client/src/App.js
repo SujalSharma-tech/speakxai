@@ -5,7 +5,6 @@ import "./App.css";
 import { FaSearch } from "react-icons/fa";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import refreshicon from "./refresh.png";
 import QuestionCarousel from "./Components/CarouselComponent/QuestionCarousel";
 
 function App() {
