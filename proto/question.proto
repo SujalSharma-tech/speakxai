@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+service QuestionService {
+  rpc SearchQuestions (QueryRequest) returns (QueryResponse);
+}
+
+message QueryRequest {
+  string title = 1;
+  int32 page = 2;
+  int32 limit = 3;
+  string types = 4;
+}
+
+message QueryResponse {
+  repeated Question questions = 1;
+  Page next = 2;
+  Page prev = 3;
+  int32 totalpages = 4;
+  string types = 5;
+  int32 totalcount = 6;
+}
+
+message Page {
+    int32 page = 1;
+    int32 limit = 2;
+}
+
+
+message Question {
+  string id = 1;
+  string title = 2;
+  string type = 3;
+  string solution = 4;
+  string anagramType = 5;
+  repeated Block blocks = 6;
+  repeated Option options = 7;
+  string siblingId = 8;
+}
+
+message Block {
+  string text = 1;
+  bool showInOption = 2;
+  bool isAnswer = 3;
+}
+
+message Option {
+  string text = 1;
+  bool isCorrectAnswer = 2;
+}

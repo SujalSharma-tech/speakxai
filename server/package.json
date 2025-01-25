@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "sujal",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.5",
+    "@grpc/proto-loader": "^0.7.13",
+    "@improbable-eng/grpc-web": "^0.15.0",
+    "@improbable-eng/grpc-web-node-http-transport": "^0.15.0",
+    "google-protobuf": "^3.21.4",
+    "grpc-web": "^1.5.0",
+    "isomorphic-fetch": "^3.0.0",
+    "mongoose": "^8.9.5",
+    "node-fetch": "^2.7.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}

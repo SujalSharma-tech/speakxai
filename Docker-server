@@ -1,0 +1,14 @@
+FROM node:16.14.2-alpine3.15
+
+WORKDIR /app
+
+COPY ./server/package.json .
+COPY ./server/package-lock.json .
+
+RUN npm install
+
+COPY ./proto/question.proto .
+COPY ./server/server.js .
+COPY ./server .
+
+ENTRYPOINT ["node", "server.js"]

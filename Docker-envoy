@@ -1,0 +1,14 @@
+FROM alpine:3.15.1 AS build
+
+WORKDIR /app
+
+RUN apk add --no-cache protoc
+
+COPY ./proto/question.proto .
+
+RUN  protoc --include_imports --include_source_info \
+    --descriptor_set_out=question.pb question.proto
+
+FROM envoyproxy/envoy:v1.22.0
+
+COPY --from=build /app/question.pb /tmp/
